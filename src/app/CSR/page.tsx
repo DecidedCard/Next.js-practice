@@ -16,7 +16,11 @@ const CSRPage = () => {
   if (!catFact) {
     return <div>로딩중입니다...</div>;
   }
-  return <div>{catFact.fact}</div>;
+  return (
+    <div className="flex justify-center items-center text-2xl h-96">
+      {catFact.fact}
+    </div>
+  );
 };
 
 export default CSRPage;

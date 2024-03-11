@@ -8,7 +8,11 @@ const ISRPage = async () => {
     },
   });
   const result: CatFactType = await response.json();
-  return <div>{result.fact}</div>;
+  return (
+    <div className="flex justify-center items-center text-2xl h-96">
+      {result.fact}
+    </div>
+  );
 };
 
 export default ISRPage;
