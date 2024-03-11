@@ -1,5 +1,6 @@
 "use client";
 
+import Loading from "@/components/Loading";
 import { CatFactType } from "@/types";
 import React, { useEffect, useState } from "react";
 
@@ -14,7 +15,11 @@ const CSRPage = () => {
     fetchData();
   }, []);
   if (!catFact) {
-    return <div>로딩중입니다...</div>;
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
   }
   return (
     <div className="flex justify-center items-center text-2xl h-96">
